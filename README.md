@@ -43,13 +43,33 @@ Borrow out = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 **Program:**
+```
+Full Adder:
+module fa(a,b,cin,sum,carry); 
+input a,b,cin; 
+output sum,carry; 
+assign sum=( (a ^ b)^cin); 
+assign carry= ( (a & b)| ( cin &(a ^ b ))); 
+endmodule
 
-/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
-*/
+Full Subtractor:
+module fs(a,b,bin,difference,borrow); 
+input a,b,bin; 
+output difference,borrow; 
+assign difference= ( (a ^ b)^bin); 
+assign borrow= ( ( a & b)| ( bin & ((a ^ b )))); 
+endmodule
+```
+/* Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming. 
+Developed by: Rytham Raj RegisterNumber: 25012528
 
 **RTL Schematic**
+Full Adder Logic Diagram: [WhatsApp Image 2025-10-16 at 23 09 52_902f5183](https://github.com/user-attachments/assets/1f825150-a732-4e32-956b-63eb8f0cb7c9)
+Full Subtractor Logic Diagram: [WhatsApp Image 2025-10-16 at 23 10 12_ecf1fb73](https://github.com/user-attachments/assets/5933feaf-5c7e-491f-b007-f8a5cec79874)
 
 **Output Timing Waveform**
+Full Adder Waveform: [WhatsApp Image 2025-10-16 at 23 09 53_077e4074](https://github.com/user-attachments/assets/4cb67295-dd5f-475f-95de-a977e26271e1)
+Full Subtractor Waveform: [WhatsApp Image 2025-10-16 at 23 10 13_806ec627](https://github.com/user-attachments/assets/7aa5704b-3528-421f-9cfe-1925b3fd7196)
 
 **Result:**
 
